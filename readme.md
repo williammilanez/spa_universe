@@ -10,10 +10,10 @@ O **SPA Universe** é uma aplicação desenvolvida com o objetivo de explorar co
 
 ### Link para o Layout 🎨
 
-Link do layout do projeto no Figma:
+Link do layout do projeto (Figma):
 [SPA Universe - Figma](https://www.figma.com/design/mK0DIkDa7FHxh0OQ5kefjh/%5BDesafios-Explorer%5D-SPA-Universe-(Copy)?node-id=104-48&p=f&t=esTbzJGl5O3MsQtQ-0) 🔗
 
-## O que será abordado no projeto 📖
+## O que é abordado no projeto 📖
 
 - **Conceitos de SPA (Single Page Application):** Criação de aplicações que não recarregam a página inteira.
 - **Mapeamento de Rotas:** Implementação de navegação entre diferentes "páginas" da aplicação, sem a necessidade de recarregar o navegador.
