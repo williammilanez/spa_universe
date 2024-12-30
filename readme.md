@@ -1,4 +1,4 @@
-# SPA Universe (https://emojipedia.org/comet)
+# SPA Universe https://emojipedia.org/comet
 
 ## Sobre o Projeto 💻
 
@@ -20,7 +20,7 @@ Link do layout do projeto no Figma:
 - **Assíncrono e Promises:** Requisições assíncronas para tornar a aplicação responsiva.
 - **Orientação a Objetos e Classes:** Aplicação de princípios de POO para criar código organizado e reutilizável.
 
-## Tecnologias Utilizadas (https://emojipedia.org/check-mark)
+## Tecnologias Utilizadas https://emojipedia.org/check-mark
 
 - HTML5
 - CSS3
