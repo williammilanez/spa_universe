@@ -18,7 +18,7 @@ Link do layout do projeto (Figma):
 - **Conceitos de SPA (Single Page Application):** Criação de aplicações que não recarregam a página inteira.
 - **Mapeamento de Rotas:** Implementação de navegação entre diferentes "páginas" da aplicação, sem a necessidade de recarregar o navegador.
 - **Assíncrono e Promises:** Requisições assíncronas para tornar a aplicação responsiva.
-- **Orientação a Objetos e Classes:** Aplicação de princípios de POO para criar código organizado e reutilizável.
+- **Orientação a Objetos e Classes:** Aplicação de princípios de POO para criar um código organizado e reutilizável.
 
 ## Tecnologias Utilizadas ✅
 
