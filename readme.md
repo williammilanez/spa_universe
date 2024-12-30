@@ -5,7 +5,7 @@
 O **SPA Universe** é uma aplicação desenvolvida com o objetivo de explorar conceitos fundamentais de Single Page Applications (SPA).
 
 <div align="center">
-  <img alt="Imagem do Projeto" src="./images/capa-do-projeto.png" width="50%">
+  <img alt="Imagem do Projeto" src="./images/capa-do-projeto.png" width="100%">
 </div>
 
 ### Link para o Layout 🎨
