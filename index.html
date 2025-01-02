@@ -51,7 +51,14 @@
             // "window.location" é um objeto JS que contém informações sobre a URL atual da página, como o protocolo, hostname, pathname, query strings, etc.
             // A desestruturação está extraindo a propriedade "pathname" desse objeto e armazenando seu valor na variável pathname.
 
-            console.log(pathname)
+            const route = routes[pathname] || routes[404]
+            console.log("antes do fetch")
+
+            fetch(route)
+            .then(data => data.text())
+            .then(html => console.log(html))
+
+            console.log(route)
         }
     </script>
 </body>
