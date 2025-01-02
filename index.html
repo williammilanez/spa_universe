@@ -19,18 +19,39 @@
 </head>
 <body>
     <nav>
-        <a id="page1" href="./" onclick="route()">Home</a>
-        <a id="page2" href="./the_universe" onclick="route()">O Universo</a>
-        <a id="page3" href="./exploration" onclick="route()">Exploração</a>
-        <a id="page4" href="./404" onclick="route()">404</a>
+        <a id="page1" href="/" onclick="route()">Home</a>
+        <a id="page2" href="/the_universe" onclick="route()">O Universo</a>
+        <a id="page3" href="/exploration" onclick="route()">Exploração</a>
+        <a id="page4" href="/404" onclick="route()">404</a>
     </nav>
 
     <div id="app"></div>
 
     <script>
+        const routes = {
+            "/": "/pages/home.html",
+            "/the_universe": "/pages/the_universe.html",
+            "/exploration": "/pages/exploration.html",
+            404: "/pages/404.html",
+        }
+
         function route(event) {
             event = event || window.event
             event.preventDefault()
+
+            window.history.pushState({}, "", event.target.href)
+
+            handle()
+        }
+
+        function handle() {
+            // const { pathname } = window.location.pathname
+            
+            const { pathname } = window.location // desestruturando o objeto
+            // "window.location" é um objeto JS que contém informações sobre a URL atual da página, como o protocolo, hostname, pathname, query strings, etc.
+            // A desestruturação está extraindo a propriedade "pathname" desse objeto e armazenando seu valor na variável pathname.
+
+            console.log(pathname)
         }
     </script>
 </body>
