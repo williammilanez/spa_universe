@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="./style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <script type="module" src="./src/main.js" defer></script>
 </head>
 <body>
     <nav>
@@ -27,39 +25,6 @@
 
     <div id="app"></div>
 
-    <script>
-        const routes = {
-            "/": "/pages/home.html",
-            "/the_universe": "/pages/the_universe.html",
-            "/exploration": "/pages/exploration.html",
-            404: "/pages/404.html",
-        }
-
-        function route(event) {
-            event = event || window.event
-            event.preventDefault()
-
-            window.history.pushState({}, "", event.target.href)
-
-            handle()
-        }
-
-        function handle() {
-            // const { pathname } = window.location.pathname
-            
-            const { pathname } = window.location // desestruturando o objeto
-            // "window.location" é um objeto JS que contém informações sobre a URL atual da página, como o protocolo, hostname, pathname, query strings, etc.
-            // A desestruturação está extraindo a propriedade "pathname" desse objeto e armazenando seu valor na variável pathname.
-
-            const route = routes[pathname] || routes[404]
-            console.log("antes do fetch")
-
-            fetch(route)
-            .then(data => data.text())
-            .then(html => console.log(html))
-
-            console.log(route)
-        }
-    </script>
+    <script src="./js/index.js" type="module" defer></script>
 </body>
 </html>
