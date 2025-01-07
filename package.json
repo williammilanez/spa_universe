@@ -1,0 +1,15 @@
+{
+  "name": "spa_universe",
+  "version": "1.0.0",
+  "description": "O **SPA Universe** é uma aplicação desenvolvida com o objetivo de explorar conceitos fundamentais de Single Page Applications (SPA).",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
