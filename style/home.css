@@ -1,0 +1,47 @@
+@import url(../style.css);
+
+body {
+    background-image: url(../images/mountains-universe-1.png);
+    transition: background-image 3000ms ease-in-out;
+}
+
+nav a:nth-child(2) {
+    font-weight: 700;
+    font-size: 2.4rem;
+
+    color: var(--page-select-color);
+    border-bottom: 2px solid var(--page-select-color);
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    align-items: center;
+    gap: 2.4rem;
+    
+    animation: topdown 1000ms 350ms backwards;
+}
+
+@media (max-width: 860px) {
+    nav a {
+        font-size: 1.8rem;
+    }
+
+    nav svg {
+        display: none;
+    }
+
+    .content {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 3.6rem;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+}

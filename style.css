@@ -11,44 +11,34 @@
     --button-select: #02799D;
 
     font-family: 'Roboto', sans-serif;
-    font-size: clamp(40%, 1% + 2vw, 62.5%);
+    font-size: 62.5%;
 }
 
 html, body {
     font-family: var(--font-family);
-
-    width: 100%;
+    font-size: 1.6rem;
     min-height: 100vh; /* garante que sempre cubra a altura visível */
+    width: 100%;
+
+    background-image: url(./images/mountains-universe-1.png);
     background-size: cover; /* faz com que a imagem cubra a tela */
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden; /* evita rolagem */
-}
 
-#app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    z-index: 1; /* garante que o conteúdo fique acima da imagem de fundo */
+    transition: background-image 0.3s ease;
 }
 
 nav {
-    position: fixed;
-    width: 100%;
     color: var(--text-color);
+
+    padding: 4rem 7.2rem;
+
     display: flex;
     align-items: center;
-    padding: 4rem 72rem 4rem 7.2rem;
-    gap: 3.2rem;
-    z-index: 1; /* garante que o menu fique acima do conteúdo */
-}
+    gap: 5rem;
 
-nav img {
-    width: 5rem;
-    height: 4.2rem;
+    z-index: 1; /* garante que o menu fique acima do conteúdo */
 }
 
 nav a {
@@ -56,75 +46,119 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 2.4rem;
+    line-height: 2.2rem;
+    padding-bottom: 1.1rem;
+
     white-space: nowrap;
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 nav a:hover {
     color: var(--page-select-color);
-}
-
-nav a:active, nav a.active {
-    color: var(--page-select-color);
     font-weight: bold;
+    scale: 1.1;
 }
 
-.text-left {
-    text-align: left;
+.content {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 64.8rem;
+    
+    animation: topdown 700ms 350ms backwards;
 }
 
-h1, p {
+.content h1 {
     color: var(--page-select-color);
-}
 
-h1 {
-    font-weight: bold;
     font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 125%;
 }
 
-p {
-    font-weight: 400;
-    font-size: 1.8rem;
-}
-
-button {
+.content p {
     color: var(--page-select-color);
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.button {
+    color: var(--page-select-color);
+    background-color: transparent;
+
     border-radius: 0.5rem;
-    padding: 1.2rem 3.2rem;
+    border: 2px solid var(--page-select-color);
+
     font-size: 1.4rem;
     font-weight: 700;
+    line-height: 2.4rem;
+    padding: 1.2rem 3.2rem;
+
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
     z-index: 1;
-    background-color: transparent;
-    border: 2px solid var(--page-select-color);
+
     text-transform: uppercase;
 }
 
-button:hover {
-    background-color: var(--page-select-color);
+
+.button:hover {
     color: var(--button-select);
+    background-color: var(--page-select-color);
+
+    transition: background-color 0.3s ease-in-out;
 }
 
-/*
-.page1 h1 {
-    margin-bottom: 2.4rem;
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.page2, .page3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-    max-width: 60%;
+@keyframes rightleft {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.page2 p, .page3 p {
-    word-wrap: break-word;
-}
+@media (max-width: 860px) {
+    nav {
+        padding: 2rem 3.6rem;
+        gap: 2rem;
+        overflow-x: auto; /* garante que o menu role horizontalmente, se necessário */
+    }
 
-.page2 h1, .page3 h1 {
-    margin-bottom: 1.6rem;
-}
+    nav a {
+        font-size: 1.8rem;
+    }
 
-*/
+    nav svg {
+        display: none;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .content h1 {
+        font-size: 3.6rem;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+}

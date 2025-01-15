@@ -1,0 +1,39 @@
+body {
+    transition: background-image 3000ms ease-in-out;
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    align-items: center;
+    gap: 2.4rem;
+
+    text-align: center;
+    
+    animation: topdown 1000ms 350ms backwards;
+}
+
+@media (max-width: 860px) {
+    nav a {
+        font-size: 1.8rem;
+    }
+
+    nav svg {
+        display: none;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .content h1 {
+        font-size: 3.6rem;
+        text-align: center;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+        text-align: justify;
+    }
+}
