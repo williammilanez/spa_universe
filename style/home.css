@@ -10,7 +10,6 @@ nav a:nth-child(2) {
     font-size: 2.4rem;
 
     color: var(--page-select-color);
-    border-bottom: 2px solid var(--page-select-color);
 }
 
 .content {
